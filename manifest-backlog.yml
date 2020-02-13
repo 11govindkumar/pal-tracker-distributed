@@ -2,8 +2,9 @@ applications:
 - name: tracker-backlog
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
-  - route: backlog-pal-${UNIQUE_IDENTIFIER}.${DOMAIN}
-  memory: 1G
+  - route: backlog-pal-gk-dis.cfapps.io
+  memory: 475M
+  disk_quota: 475M
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: http://${REGISTRATION_SERVER_ROUTE}
