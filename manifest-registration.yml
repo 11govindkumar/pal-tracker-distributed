@@ -10,8 +10,10 @@ applications:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     JAVA_OPTS: '-Xms64m -Xmx256m'
     MANAGEMENT_ENDPOINT_HEALTH_SHOW-DETAILS: 'always'
+    MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: '*'
     GRANT_TYPE: client_credentials
   services:
   - tracker-registration-database
   - tracker-service-registry
   - tracker-sso
+  - tracker-config-server
